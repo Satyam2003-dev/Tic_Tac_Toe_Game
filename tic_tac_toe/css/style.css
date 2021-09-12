@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+body {
+	font-family: "Architects Daughter", cursive, consolas;
+	background:linear-gradient(yellow,blue)
+}
+
+.Header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	padding-top: 10px;
+	padding-left: 2%;
+
+	background-color: black;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+
+	z-index: 2;
+}
+
+.Header .Credits {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 2%;
+	font-size: 50%;
+	font-family: consolas;
+}
+
+.Credits span {
+	color: orange;
+}
+
+
+
+#GameBoard {
+	margin: 100px auto 0 auto;
+	width: 450px;
+	height: 450px;
+	text-align: center;
+
+	border: 22px solid #F4A460;
+	border-radius: 10px;
+	background-color: #3B653D;
+
+	box-shadow: 0 0 40px 1px gray;
+}
+
+#GameBoard * {
+	font-family: inherit;
+	font-weight: bold;
+	color: white;
+}
+
+#GameBoard button {
+	cursor: pointer;
+	font-size: inherit;
+	font-style: italic;
+
+	background-color: transparent;
+	border: none;
+}
+
+
+#PlayScreen {
+	overflow: hidden;
+}
+
+#PlayScreen table {
+	position: relative;
+	width: 100%;
+	height: 94.5%;
+	table-layout: fixed;
+
+	border-collapse: collapse;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+#PlayScreen td {
+	width: 30%;
+	height: 30%;
+	border: 10px solid white;
+}
+
+#PlayScreen tr:first-child td {
+	border-top: 0;
+}
+
+#PlayScreen tr:last-child td {
+	border-bottom: 0;
+}
+
+#PlayScreen tr td:first-child {
+	border-left: 0;
+}
+
+#PlayScreen tr td:last-child {
+	border-right: 0;
+}
+
+#GameInfo {
+	letter-spacing: 2px;
+	border-bottom: 2px solid white;
+}
+
+
+@-webkit-keyframes SlideIn {
+	from {
+		left: -100%
+	}
+
+	to {
+		left: 0%
+	}
+}
+
+@-moz-keyframes SlideIn {
+	from {
+		left: -100%
+	}
+
+	to {
+		left: 0%
+	}
+}
+
+@-o-keyframes SlideIn {
+	from {
+		left: -100%
+	}
+
+	to {
+		left: 0%
+	}
+}
+
+@keyframes SlideIn {
+	from {
+		left: -100%
+	}
+
+	to {
+		left: 0%
+	}
+}
+
+
+#EndGameMessage {
+	text-align: center;
+	position: relative;
+	top: -100%;
+	left: -100%;
+	height: 100%;
+	padding: 30% 0;
+	font-size: 2em;
+
+	background-color: black;
+	opacity: 0.8;
+
+	-moz-animation: SlideIn 3s;
+	-moz-animation-fill-mode: forwards;
+	-webkit-animation: SlideIn 3s;
+	-webkit-animation-fill-mode: forwards;
+	-o-animation: SlideIn 3s;
+	-o-animation-fill-mode: forwards;
+}
+
+.OptionScreen {
+	font-size: 2.5em;
+}
+
+.FullSize {
+	width: 100%;
+	height: 100%;
+}
+
+.Disabled {
+	display: none;
+}
+
+.VerticalCenter {
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

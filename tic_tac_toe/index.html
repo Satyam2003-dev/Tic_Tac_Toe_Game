@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tictactoeAI.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="Header">
+      Tic-Tac-Toe
+      <span class="Credits"
+        >Designed and Coded by <span>Satyam Kumar</span></span
+      >
+    </div>
+    
+    <div id="GameBoard">
+      <div id="StartScreen" class="OptionScreen">
+        <p>TIC-TAC-TOE</p>
+        <button onClick="screens.EnableCountScreen();">Start</button>
+      </div>
+
+      <div id="CountScreen" class="Disabled OptionScreen">
+        <p>How many players?</p>
+        <button
+          onclick="gameInfo.SetPlayerCount(1);screens.EnableShapeScreen();"
+        >
+          1
+        </button>
+        <button
+          onclick="gameInfo.SetPlayerCount(2);screens.EnableShapeScreen();"
+        >
+          2
+        </button>
+      </div>
+
+      <div id="ShapeScreen" class="Disabled OptionScreen">
+        <p>Player 1 select your shape</p>
+        <button
+          onclick="gameInfo.SetPlayerShape('X');screens.EnablePlayScreen();UpdateScoreUI();"
+        >
+          X
+        </button>
+        <button
+          onclick="gameInfo.SetPlayerShape('O');screens.EnablePlayScreen();UpdateScoreUI();"
+        >
+          O
+        </button>
+      </div>
+
+      <div id="PlayScreen" class="Disabled FullSize">
+        <div id="GameInfo">
+          <span id="Player1ScoreLabel"
+            >Player: <span id="Player1Score">0</span>
+          </span>
+          <span id="Player2ScoreLabel"
+            >AI: <span id="Player2Score">0</span>
+          </span>
+          <button style="float: right" onclick="Reset()">Reset</button>
+        </div>
+        <table>
+          <tr id="Row-1">
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+          </tr>
+          <tr id="Row-2">
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+          </tr>
+          <tr id="Row-3">
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+            <td onClick="PlayBoxClick(this)"></td>
+          </tr>
+        </table>
+        <div id="EndGameMessage" class="Disabled">
+          <p>End Game Message</p>
+          <button onclick="PlayAgain();">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
